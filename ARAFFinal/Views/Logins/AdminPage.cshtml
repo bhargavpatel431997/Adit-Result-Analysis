@@ -1,0 +1,208 @@
+﻿
+@{
+    ViewBag.Title = "AdminPage";
+    Layout = "~/Views/Shared/_LoginPageView.cshtml";
+}
+
+<style>
+    #custom-search-input {
+        padding: 3px;
+        border: solid 1px #E4E4E4;
+        border-radius: 6px;
+        background-color: #fff;
+    }
+
+        #custom-search-input input {
+            border: 0;
+            box-shadow: none;
+        }
+
+        #custom-search-input button {
+            margin: 2px 0 0 0;
+            background: none;
+            box-shadow: none;
+            border: 0;
+            color: #666666;
+            padding: 0 8px 0 10px;
+            border-left: solid 1px #ccc;
+        }
+
+            #custom-search-input button:hover {
+                border: 0;
+                box-shadow: none;
+                border-left: solid 1px #ccc;
+            }
+
+        #custom-search-input .glyphicon-search {
+            font-size: 23px;
+        }
+
+.black-background {background-color:#333333;}
+.white {color:#ffffff;}
+.black {color:#333333;}
+</style>
+
+
+<br /><br /><br />
+
+<div class="container" style="outline: 1px solid black; margin:10px; padding:10px;">
+    <h2 style="text-align:center;">Admin Panel</h2>
+    <div class="row" style="align-content:center;margin:10px; margin-left:10%;">
+        <div class="col-sm-5" style="outline: 1px solid black; padding: 5px; margin:10px;">
+            <h3 style="text-align:center; padding-bottom:5px;">Manage Tables</h3>
+            <button type="button" class="btn btn-default btn-block black-background white" onclick="@("window.location.href='" + @Url.Action("Index", "Departments") + "'");">DEPARTMENT</button>
+            <button type="button" class="btn btn-default btn-block black-background white" onclick="@("window.location.href='" + @Url.Action("Index", "Logins1") + "'");">LOGIN</button>
+            <button type="button" class="btn btn-default btn-block black-background white" onclick="@("window.location.href='" + @Url.Action("Index", "Results") + "'");">RESULTS</button>
+            <button type="button" class="btn btn-default btn-block black-background white" onclick="@("window.location.href='" + @Url.Action("Index", "Semesters") + "'");">SEMESTER</button>
+            <button type="button" class="btn btn-default btn-block black-background white" onclick="@("window.location.href='" + @Url.Action("Index", "Students") + "'");">STUDENT</button>
+            <button type="button" class="btn btn-default btn-block black-background white" onclick="@("window.location.href='" + @Url.Action("Index", "Subjects") + "'");">SUBJECTS</button>
+        </div>
+        <div class="col-sm-5" style="outline: 1px solid black; padding: 5px; margin :10px;">
+            <h3 style="text-align:center; padding-bottom:5px;">Students</h3>
+            <br />
+            @using (Html.BeginForm("SearchByEnrollment", "StudentInfo", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+            
+                    <div class="col-sm-12">
+                        <div id="custom-search-input">
+                            <div class="input-group col-md-12">
+                                <input type="text" class="form-control input-lg" name="SearchBox" placeholder="Enrollment No" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-info btn-sm" type="submit">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+             }
+                    <h5 style="text-align:center;color:red;">@Html.Raw(ViewBag.FileContent)</h5>
+                    <br />
+                    <h4 style="text-align:center;">OR</h4>
+                    <br />
+                    @using (Html.BeginForm("Search", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        <div class="btn-group btn btn-default black-background" style="margin-left:20px;  ">
+                            <select name="Department" id="Department">
+                                <option value="">- Select Department -</option>
+                                <option value="AE">AUTOMOBILE</option>
+                                <option value="CIVIL">CIVIL</option>
+                                <option value="CP">COMPUTER</option>
+                                <option value="EE">ELECTRICAL</option>
+                                <option value="ECE">ELECTRONICS</option>
+                                <option value="FT">FOOD PROCESSING</option>
+                                <option value="IT">INFORMATION TECHNOLOGY</option>
+                                <option value="ME02">MECHANICAL 02</option>
+                                <option value="ME08">MECHANICAL 08</option>
+                            </select>
+
+                            <select name="Semester">
+                                <option value="">- Select Semester -</option>
+                                <option value="1">sem1</option>
+                                <option value="2">sem2</option>
+                                <option value="3">sem3</option>
+                                <option value="4">sem4</option>
+                                <option value="5">sem5</option>
+                                <option value="6">sem6</option>
+                                <option value="7">sem7</option>
+                                <option value="8">sem8</option>
+                            </select>
+                        </div>
+                        <button  class="btn btn-info btn-lg black-background" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+
+                    }
+            <br />
+                </div>
+        
+    </div>
+</div>
+@*
+    <div class="row">
+                        <div class="col-sm-5">
+
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default black-background white">Department</button>
+
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                 <span class="caret"></span>
+                                 <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+
+                                 <ul class="dropdown-menu" role="menu">
+                                         <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+
+                                 <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                        </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default black-background white">Semester</button>
+
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
+*@
+@*<div class="row" style="align-content:center">
+        <div class="col-lg-8" style="outline: 1px solid black; padding: 5px; margin:5px;">
+            <h3 style="text-align:center; padding-bottom:5px;">Manage Students</h3>
+            <button type="button" class="btn btn-default btn-block black-background white" onclick="@("window.location.href='" + @Url.Action("Index", "Home") + "'");">AUTOMOBILE ENGINEERING</button>
+            <button type="button" class="btn btn-default btn-block black-background white" onclick="@("window.location.href='" + @Url.Action("Index", "Home") + "'");">CIVIL ENGINEERING</button>
+            <button type="button" class="btn btn-default btn-block black-background white" onclick="@("window.location.href='" + @Url.Action("Index", "Home") + "'");">COMPUTER ENGINEERING</button>
+            <button type="button" class="btn btn-default btn-block black-background white" onclick="@("window.location.href='" + @Url.Action("Index", "Home") + "'");">ELECTRICAL ENGINEERING</button>
+            <button type="button" class="btn btn-default btn-block black-background white" onclick="@("window.location.href='" + @Url.Action("Index", "Home") + "'");">ELECTRONICS & COMMUNICATION ENGINEERING</button>
+            <button type="button" class="btn btn-default btn-block black-background white" onclick="@("window.location.href='" + @Url.Action("Index", "Home") + "'");">FOOD PROCESSING TECHNOLOGY</button>
+            <button type="button" class="btn btn-default btn-block black-background white" onclick="@("window.location.href='" + @Url.Action("Index", "Home") + "'");">INFORMATION TECHNOLOGY</button>
+            <button type="button" class="btn btn-default btn-block black-background white" onclick="@("window.location.href='" + @Url.Action("Index", "Home") + "'");">MECHANICAL ENGINEERING 02</button>
+            <button type="button" class="btn btn-default btn-block black-background white" onclick="@("window.location.href='" + @Url.Action("Index", "Home") + "'");">MECHANICAL ENGINEERING 08</button>
+        </div>
+    </div>*@
+@*
+    <div class="row" style="align-content:center; outline: 1px solid black; padding: 5px; margin:5px;">
+            <h2 style="text-align:center;">Manage Tables</h2>
+       <div class="btn-group col-lg-4">
+            <button type="button" class="btn btn-default btn-block dropdown-toggle black-background white" data-toggle="dropdown">
+                Departments
+                <span class="caret" ></span>
+            </button>
+
+            <ul class="dropdown-menu" role="menu">
+                <li class="btn btn-block white"><a href="#">Action</a></li>
+                <li class="btn btn-block white"><a href="#">Another action</a></li>
+                <li class="btn btn-block white"><a href="#">Something else here</a></li>
+            </ul>
+
+        </div>
+     </div>*@
+
+           <!--<select class="dropdown-menu" role="menu">-->
+<!--
+<option value="AE">AUTOMOBILE</option>
+    <option value="CIVIL">CIVIL</option>
+    <option value="CP">COMPUTER</option>
+    <option value="EE">ELECTRICAL</option>
+    <option value="ECE">ELECTRONICS</option>
+    <option value="FT">FOOD PROCESSING</option>
+    <option value="IT">INFORMATION TECHNOLOGY</option>
+    <option value="ME02">MECHANICAL 02</option>
+    <option value="ME08">FOOD PROCESSING</option>
+    -->
+<!--</select>-->

@@ -1,0 +1,104 @@
+﻿@using ARAFFinal.Models
+<script type="text/javascript" src="~/Scripts/custom_scripts.js"></script>
+@{
+    ViewBag.Title = "FacultyPage";
+    Layout = "~/Views/Shared/_LoginPageView.cshtml";
+}
+<style>
+    .btn-file {
+        position: relative;
+        overflow: hidden;
+    }
+
+        .btn-file input[type=file] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            min-width: 100%;
+            min-height: 100%;
+            font-size: 100px;
+            text-align: right;
+            filter: alpha(opacity=0);
+            opacity: 0;
+            outline: none;
+            background: white;
+            cursor: inherit;
+            display: block;
+        }
+</style>
+<div class="container" style="outline: 1px solid black; margin-top:40px; margin-left:10px; padding:20px;">
+    <h2 style="text-align:center;">Faculty</h2>
+    <div class="row" style="margin-left:90px;">
+        <div class="col-sm-5" style="outline: 1px solid black;margin:10px;padding:20px;">
+            <div class="form-group">
+                <h3 style="text-align:center;">First time entry of students?</h3>
+                <br />
+                <pre style="font-size:18px;font-family:'Times New Roman', Times, serif;">
+<b>INSTRUCTION</b>
+-If student info not available in database  then it's mandatory to perform below steps:
+    --If data is duplicate dont worry.
+    --Click on link "Get File To Enter Data" which     will provides csv file fill it.
+    --Upload that file then proceed to section of <b>        Result Entry</b>.
+    --<b>Remember :</b>enrollment number must not in  exponential form.
+                </pre>
+                <a onclick="getCsv()" href="" download="" id="download" style="margin-left:110px;margin-right:12px;">Get File To Enter Data</a>
+                <br/>
+                @using (Html.BeginForm("UploadFile", "Logins", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary()
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="file" name="chose file" value="chose file" style="margin-left:20px;" accept=".csv" />
+                            </td>
+                            <td>
+                                <label class="btn btn-info btn-file" style="padding-left:20px;padding-right:20px;margin-left:-40px;">
+                                    Upload <input type="submit" style="display: none;" name="uploadeFile" accept=".csv" />
+                                </label>
+                            </td>
+                        </tr>
+                    </table>
+                }
+                <h4>@ViewBag.message</h4>
+            </div>
+        </div>
+        <div class="col-sm-5" style="outline: 1px solid black;margin:10px;padding:20px;">
+            <div class="form-group">
+                <h3 style="text-align:center;">Result entry for current year</h3>
+                <br />
+                @using (Html.BeginForm("ResultEntry", "Logins", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary()
+                    <select name="Semester" id="Semester" class="form-control" style="margin-left:50px;" required>
+                        <option value="">- Select Semester -</option>
+                        <option value="1">SEM1</option>
+                        <option value="2">SEM2</option>
+                        <option value="3">SEM3</option>
+                        <option value="4">SEM4</option>
+                        <option value="5">SEM5</option>
+                        <option value="6">SEM6</option>
+                        <option value="7">SEM7</option>
+                        <option value="8">SEM8</option>
+                    </select>
+                    <br/>
+                    <input class="btn btn-info" style="margin-left:150px;"type="submit" value="Proceed"/>
+                }
+                <br/>
+                <hr />
+                <br />
+                <h3 style="text-align:center;margin-bottom:30px;">Edit student information</h3>
+                
+                @using (Html.BeginForm("EditStudentById", "Logins", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary()
+                    <input type="text" class="form-control input-lg" name="SearchBox" style="margin-left:45px;" placeholder="Enrollment No" />
+                    <br/><input type="submit" class="btn btn-info" value="Edit" style="margin-left:140px;padding-left:30px;padding-right:30px;margin-bottom:11px;"/>
+                }
+                <br />
+            </div>
+        </div>
+    </div>
+</div>

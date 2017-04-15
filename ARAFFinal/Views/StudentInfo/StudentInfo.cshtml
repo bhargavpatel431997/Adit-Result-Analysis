@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "StudentInfo";
+    Layout = "~/Views/Shared/_LoginPageView.cshtml";
+}
+<div class="container" style="outline: 1px solid black; margin:20px; padding:20px;">
+    <table>
+        <tr>
+            <td><b style="font-size:medium;">NAME:</b></td>
+            <td>@ViewBag.students.StudentName</td>
+        </tr>
+        <tr>
+            <td><b style="font-size:medium;">ENROLLMENT:</b></td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;@ViewBag.students.StudentId</td>
+        </tr>
+        <tr>
+            <td><b style="font-size:medium;">DEPARTMENT:</b></td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;@ViewBag.departments.DepartmentName.ToUpper()</td>
+        </tr>
+        <tr>
+            <td><b style="font-size:medium;">OVERALL RANK:</b></td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;@ViewBag.cpiRank</td>
+        </tr>
+        <tr>
+            <td><b style="font-size:medium;">CURRENT SEM RANK:</b></td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;@ViewBag.spiRank</td>
+        </tr>
+    </table>
+    <br />
+    
+        <div class="container" style="outline: 0.5px solid black; margin:10px; padding:10px;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>CPI</th>
+                        <th>CGPA</th>
+                        <th>CURRENT SEM BACKLOG</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (ViewBag.backlog.ToString() == "0")
+                    {
+                        <tr class="success">
+                            <th>
+                                @ViewBag.Cpi
+                            </th>
+                            <th>
+                                @ViewBag.Cgpa
+                            </th>
+                            <th>
+                                @ViewBag.Backlog
+                            </th>
+                        </tr>
+                    }
+                    else
+                    {
+                        <tr class="danger">
+                            <th>
+                                @ViewBag.Cpi
+                            </th>
+                            <th>
+                                @ViewBag.Cgpa
+                            </th>
+                            <th>
+                                @ViewBag.Backlog
+                            </th>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        @foreach (var semester in ViewBag.semesters)
+            {
+            <div class="container" style="outline: 0.5px solid black; margin:10px; padding:10px;">
+
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <p style="font-size:medium"><b>SEMESTER:</b>&nbsp;&nbsp;@semester.SemesterId<b>&nbsp;&nbsp;&nbsp;&nbsp;SPI:</b>&nbsp;&nbsp;@semester.Spi</p>
+                        </tr>
+                        <tr>
+                            <th>Subject Id</th>
+                            <th>Subject Name</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    @foreach (var result in ViewBag.results)
+                      {
+                        <tbody>
+                            @if (semester.SemesterId == result.SemesterId)
+                            {
+                                <tr>
+                                    <td>@result.SubjectId</td>
+                                    <td>@ViewBag.subjects[result.SubjectId.ToString()]</td>
+                                    <td>@result.Grade</td>
+                                </tr>
+                            }
+                        </tbody>
+                    }
+                </table>
+            </div>
+        }
+    
+</div>

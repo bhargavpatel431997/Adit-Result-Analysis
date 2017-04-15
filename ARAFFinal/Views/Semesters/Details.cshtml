@@ -1,0 +1,67 @@
+﻿@model ARAFFinal.Models.Semester
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LoginPageView.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Semester</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Spi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Spi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cgpa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cgpa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cpi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cpi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Backlog)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Backlog)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.StudentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.StudentName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

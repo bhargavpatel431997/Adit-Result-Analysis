@@ -1,0 +1,167 @@
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\ApplicationInsights.config
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\roslyn\csc.exe
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\roslyn\System.Collections.Immutable.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\roslyn\System.Reflection.Metadata.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\roslyn\vbc.exe
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\roslyn\VBCSCompiler.exe
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\roslyn\VBCSCompiler.exe.config
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\ARAFFinal.dll.config
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\ARAFFinal.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\ARAFFinal.pdb
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Antlr3.Runtime.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\EntityFramework.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\EntityFramework.SqlServer.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.AI.Agent.Intercept.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.AI.DependencyCollector.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.AI.Web.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.AI.WindowsServer.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.ApplicationInsights.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.AspNet.Identity.Core.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.Owin.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.Owin.Security.Cookies.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.Owin.Security.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.Owin.Security.Facebook.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.Owin.Security.Google.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.Owin.Security.OAuth.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.Owin.Security.Twitter.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.Web.Infrastructure.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Newtonsoft.Json.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Owin.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\System.Web.Helpers.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\System.Web.Mvc.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\System.Web.Optimization.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\System.Web.Razor.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\System.Web.WebPages.Deployment.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\System.Web.WebPages.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\System.Web.WebPages.Razor.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\WebGrease.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.AI.DependencyCollector.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.AI.Web.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.AI.WindowsServer.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.ApplicationInsights.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\System.Web.Helpers.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\System.Web.Mvc.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\System.Web.Optimization.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\System.Web.Razor.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\System.Web.WebPages.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\System.Web.WebPages.Deployment.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\System.Web.WebPages.Razor.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Antlr3.Runtime.pdb
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Newtonsoft.Json.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\EntityFramework.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\EntityFramework.SqlServer.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.AspNet.Identity.Core.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.Owin.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.Owin.Security.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.Owin.Security.Facebook.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.Owin.Security.Cookies.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.Owin.Security.OAuth.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.Owin.Security.Google.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.Owin.Security.Twitter.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\obj\Debug\ARAFFinal.csprojResolveAssemblyReference.cache
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\obj\Debug\ARAFFinal.dll
+D:\STUDY\Fair_projects\ARAFFinal\ARAFFinal\obj\Debug\ARAFFinal.pdb
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\ApplicationInsights.config
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\roslyn\csc.exe
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\roslyn\vbc.exe
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\roslyn\VBCSCompiler.exe
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\ARAFFinal.dll.config
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\ARAFFinal.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\ARAFFinal.pdb
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Antlr3.Runtime.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\EntityFramework.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\EntityFramework.SqlServer.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.AI.Web.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.ApplicationInsights.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.Owin.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.Owin.Security.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Newtonsoft.Json.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Owin.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\System.Web.Helpers.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\System.Web.Mvc.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\System.Web.Optimization.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\System.Web.Razor.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\System.Web.WebPages.Deployment.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\System.Web.WebPages.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\System.Web.WebPages.Razor.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\WebGrease.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.AI.Web.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.ApplicationInsights.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\System.Web.Helpers.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\System.Web.Mvc.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\System.Web.Optimization.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\System.Web.Razor.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\System.Web.WebPages.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\System.Web.WebPages.Deployment.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\System.Web.WebPages.Razor.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Antlr3.Runtime.pdb
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Newtonsoft.Json.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\EntityFramework.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\EntityFramework.SqlServer.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.Owin.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.Owin.Security.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\obj\Debug\ARAFFinal.csprojResolveAssemblyReference.cache
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\obj\Debug\ARAFFinal.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\obj\Debug\ARAFFinal.pdb
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\LumenWorks.Framework.IO.dll
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\LumenWorks.Framework.IO.pdb
+C:\Users\bharg\Source\Repos\ADIT Result Analysis\ARAFFinal\bin\LumenWorks.Framework.IO.xml

@@ -1,0 +1,186 @@
+﻿
+@{
+    ViewBag.Title = "SemAnalysis";
+    Layout = "~/Views/Shared/_ReturnHomeLayout.cshtml";
+}
+<style>
+    thead {
+        background: darksalmon;
+    }
+
+    tbody {
+        background: bisque;
+    }
+</style>
+<div class="container" style="outline: 1px solid black; margin-top:40px; padding:40px;" id="htm">
+    <p style="text-align:center;font-size:30px;">A D Patel Institute Of Technology</p>
+    <p style="text-align:center;font-size:20px;">Department of @ViewBag.department</p>
+    <p style="text-align:center;font-size:15px;">REVISE RESULT ANALYSIS</p>
+    @{
+        string s = ViewBag.semester;
+        switch (s)
+        {
+            case "1":
+                <h5 style="text-align:center;">@ViewBag.semester<sup>st</sup> Semester A. Y. @(int.Parse(DateTime.Now.Year.ToString()) - 1) - @DateTime.Now.Year.ToString()[2]@DateTime.Now.Year.ToString()[3]</h5>
+                break;
+            case "2":
+                <h5 style="text-align:center;">@ViewBag.semester<sup>nd</sup> Semester A. Y. @(int.Parse(DateTime.Now.Year.ToString()) - 1) - @DateTime.Now.Year.ToString()[2]@DateTime.Now.Year.ToString()[3]</h5>
+                break;
+            case "3":
+                <h5 style="text-align:center;">@ViewBag.semester<sup>rd</sup> Semester A. Y. @(int.Parse(DateTime.Now.Year.ToString()) - 1) - @DateTime.Now.Year.ToString()[2]@DateTime.Now.Year.ToString()[3]</h5>
+                break;
+            case "4":
+            case "5":
+            case "6":
+            case "7":
+            case "8":
+                <h5 style="text-align:center;">@ViewBag.semester<sup>th</sup> Semester A. Y. @(int.Parse(DateTime.Now.Year.ToString()) - 1) - @DateTime.Now.Year.ToString()[2]@DateTime.Now.Year.ToString()[3]</h5>
+                break;
+        }
+    }
+    <br />
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Sr. No.</th>
+                <th>Subject Code</th>
+                <th>Subject Name</th>
+                <th>Nos. of Students Appeared in Exam</th>
+                <th>Nos. Passed</th>
+                <th>Nos. of Failed</th>
+                <th>%Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int j = 1;
+                foreach (var gradesData in ViewBag.grades)
+                {
+                    if (gradesData.Key != "subject_id")
+                    {
+                        <tr>
+                            <th>@j</th>
+                            <th>@gradesData.Key</th>
+                            <th>@gradesData.Value[0]</th>
+                            <th>@gradesData.Value[9]</th>
+                            <th>@(int.Parse(gradesData.Value[9]) - int.Parse(gradesData.Value[8]))</th>
+                            <th>@gradesData.Value[8]</th>
+                            <th>@( String.Format("{0:0.00}", (((int.Parse(gradesData.Value[9]) - int.Parse(gradesData.Value[8])) / (int.Parse(gradesData.Value[9]) * 1.0)) * 100.00)))</th>
+                        </tr>
+                        j++;
+                    }
+                }
+            }
+        </tbody>
+    </table>
+    <br />
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Sr. No.</th>
+                <th>Subject Code</th>
+                <th>Subject Name</th>
+                <th>AA</th>
+                <th>AB</th>
+                <th>BB</th>
+                <th>BC</th>
+                <th>CC</th>
+                <th>CD</th>
+                <th>DD</th>
+                <th>FF</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int i = 1;
+                foreach (var gradesData in ViewBag.grades)
+                {
+                    if (gradesData.Key != "subject_id")
+                    {
+                        <tr>
+                            <th>@i</th>
+                            <th>@gradesData.Key</th>
+                            <th>@gradesData.Value[0]</th>
+                            <th>@gradesData.Value[1]</th>
+                            <th>@gradesData.Value[2]</th>
+                            <th>@gradesData.Value[3]</th>
+                            <th>@gradesData.Value[4]</th>
+                            <th>@gradesData.Value[5]</th>
+                            <th>@gradesData.Value[6]</th>
+                            <th>@gradesData.Value[7]</th>
+                            <th>@gradesData.Value[8]</th>
+                            <th>@gradesData.Value[9]</th>
+                        </tr>
+                        i++;
+                    }
+                }
+            }
+        </tbody>
+    </table>
+    <br />
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>SPI</th>
+                <th>&gt;8</th>
+                <th>(Between 8-7)</th>
+                <th>(Between 7-6)</th>
+                <th>(Between 6-5)</th>
+                <th>Below 5</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Nos. of Student</th>
+                <th>@ViewBag.spiCount["above8"]</th>
+                <th>@ViewBag.spiCount["between78"]</th>
+                <th>@ViewBag.spiCount["between67"]</th>
+                <th>@ViewBag.spiCount["between56"]</th>
+                <th>@ViewBag.spiCount["below5"]</th>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>CPI</th>
+                <th>&gt;8</th>
+                <th>(Between 8-7)</th>
+                <th>(Between 7-6)</th>
+                <th>(Between 6-5)</th>
+                <th>Below 5</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Nos. of Student</th>
+                <th>@ViewBag.cpiCount["above8"]</th>
+                <th>@ViewBag.cpiCount["between78"]</th>
+                <th>@ViewBag.cpiCount["between67"]</th>
+                <th>@ViewBag.cpiCount["between56"]</th>
+                <th>@ViewBag.cpiCount["below5"]</th>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <p style="text-align:center;font-size:15px;"><b>STUDENT DETAILS</b></p>
+    <p style="text-align:center;font-size:13px;"><b>Class Topper(Based on SPI): @ViewBag.topper["topperSpi"][1]   &nbsp;&nbsp;-@ViewBag.topper["topperSpi"][0] (@ViewBag.topper["topperSpi"][2]) </b></p>
+    <p style="text-align:center;font-size:13px;"><b>Class Topper(Based on CPI): @ViewBag.topper["topperCpi"][1] &nbsp;&nbsp;-@ViewBag.topper["topperCpi"][0] (@ViewBag.topper["topperCpi"][2]) </b></p>
+    <p style="text-align:center;font-size:13px;"><b>Total Nos. Students Appeared: &nbsp;&nbsp;@(String.Format("{0:0}", ViewBag.totalFailedResult[0])) </b></p>
+    <p style="text-align:center;font-size:13px;"><b>Nos. Students Passed: &nbsp;&nbsp;@(String.Format("{0:0}", ViewBag.totalFailedResult[0]-ViewBag.totalFailedResult[1])) </b></p>
+    <p style="text-align:center;font-size:13px;"><b>%Result: &nbsp;&nbsp;@(String.Format("{0:0.00}", ViewBag.totalFailedResult[2])) </b></p>
+    <p style="font-size:13px;">
+        <b>
+            Head @{ if (ViewBag.departmentId == "ME02" || ViewBag.departmentId == "ME08") { <b>ME</b>}else {<b>@ViewBag.departmentId</b>} }
+        </b><b style="float:right">F.A.</b>
+    </p>
+    <p style="font-size:12.5px;">Copy to :- 1.&nbsp;Academic section (Through Principal Sir)</p>
+    <p style="font-size:12.5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.&nbsp;All Course Teachers &amp; FA</p>
+    <p style="font-size:12.5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.&nbsp;Result Analysis Dept. File (Orignal)</p>
+
+    
+</div>
+
+ 

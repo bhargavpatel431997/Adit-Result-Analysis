@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ADITStudentDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__RefactorLog">
+    <Key>
+      <PropertyRef Name="OperationKey" />
+    </Key>
+    <Property Name="OperationKey" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Departments">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentId" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="DepartmentName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="Username" />
+    </Key>
+    <Property Name="Username" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Role" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DepartmentId" Type="varchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Results">
+    <Key>
+      <PropertyRef Name="SubjectId" />
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="SubjectId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="StudentId" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="SemesterId" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="Grade" Type="varchar" MaxLength="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Semesters">
+    <Key>
+      <PropertyRef Name="SemesterId" />
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="SemesterId" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="StudentId" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="Spi" Type="float" Nullable="false" />
+    <Property Name="Cgpa" Type="float" Nullable="false" />
+    <Property Name="Cpi" Type="float" Nullable="false" />
+    <Property Name="Backlog" Type="int" Nullable="false" />
+    <Property Name="Year" Type="varchar" MaxLength="4" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="StudentName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DepartmentId" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="SemesterId" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="Year" Type="varchar" MaxLength="4" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Subjects">
+    <Key>
+      <PropertyRef Name="SubjectId" />
+    </Key>
+    <Property Name="SubjectId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SubjectName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DepartmentId" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="SemesterId" Type="varchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <Association Name="Departments_FK">
+    <End Role="Departments" Type="Self.Departments" Multiplicity="1" />
+    <End Role="Subjects" Type="Self.Subjects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="Subjects">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DeprtmentId_FK">
+    <End Role="Departments" Type="Self.Departments" Multiplicity="1" />
+    <End Role="Students" Type="Self.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Login__Departmen__5CD6CB2B">
+    <End Role="Departments" Type="Self.Departments" Multiplicity="1" />
+    <End Role="Login" Type="Self.Login" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="Login">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Results__Student__2F10007B">
+    <End Role="Students" Type="Self.Students" Multiplicity="1" />
+    <End Role="Results" Type="Self.Results" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="Results">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Semesters__Stude__30F848ED">
+    <End Role="Students" Type="Self.Students" Multiplicity="1" />
+    <End Role="Semesters" Type="Self.Semesters" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="Semesters">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Subjects_FK">
+    <End Role="Subjects" Type="Self.Subjects" Multiplicity="1" />
+    <End Role="Results" Type="Self.Results" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subjects">
+        <PropertyRef Name="SubjectId" />
+      </Principal>
+      <Dependent Role="Results">
+        <PropertyRef Name="SubjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ADITStudentDataModelStoreContainer">
+    <EntitySet Name="__RefactorLog" EntityType="Self.__RefactorLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Departments" EntityType="Self.Departments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Results" EntityType="Self.Results" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Semesters" EntityType="Self.Semesters" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Subjects" EntityType="Self.Subjects" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="Departments_FK" Association="Self.Departments_FK">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="Subjects" EntitySet="Subjects" />
+    </AssociationSet>
+    <AssociationSet Name="DeprtmentId_FK" Association="Self.DeprtmentId_FK">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Login__Departmen__5CD6CB2B" Association="Self.FK__Login__Departmen__5CD6CB2B">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="Login" EntitySet="Login" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Results__Student__2F10007B" Association="Self.FK__Results__Student__2F10007B">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="Results" EntitySet="Results" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Semesters__Stude__30F848ED" Association="Self.FK__Semesters__Stude__30F848ED">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="Semesters" EntitySet="Semesters" />
+    </AssociationSet>
+    <AssociationSet Name="Subjects_FK" Association="Self.Subjects_FK">
+      <End Role="Subjects" EntitySet="Subjects" />
+      <End Role="Results" EntitySet="Results" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

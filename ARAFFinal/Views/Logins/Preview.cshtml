@@ -1,0 +1,140 @@
+﻿@{
+    ViewBag.Title = "Preview";
+    Layout = "~/Views/Shared/_LoginPageView.cshtml";
+}
+@model System.Data.DataTable
+@using System.Data
+<script>
+    $(document).ready(function () {
+        String.prototype.format = function () {
+            var s = this,
+                i = arguments.length;
+
+            while (i--) {
+                s = s.replace(new RegExp('\\{' + i + '\\}', 'gm'), arguments[i]);
+            }
+            return s;
+        };
+        $(".btn.edit").bind("click", function (e) {
+            var tr_id = (JSON.stringify($(this).parent().prop('id'))).slice(3, -2);@*get button tr id into string format*@
+            var td_id = "td" + tr_id;
+            var in_id = "in" + tr_id;
+            var tdh_id = "tdh" + tr_id;
+            for (var i = 1; i < 8; i++) {
+                $("#{0}{1}".format(in_id, i)).val($("#{0}{1}".format(td_id, i)).html()); @*set input value which is hidden from td*@
+                $("#{0}{1}".format(tdh_id, i)).css('display', 'table-cell');
+                $("#{0}{1}".format(in_id, i)).css('display', 'table-cell');
+                $("#{0}{1}".format(td_id, i)).css('display', 'none');
+            }
+            e.preventDefault();
+        });
+
+        $(".btn.done").bind("click", function (e) {
+            var tr_id = (JSON.stringify($(this).parent().prop('id'))).slice(4,-2); @*get button tr id into string format*@
+            var td_id = "td" + tr_id;
+            var in_id = "in" + tr_id;
+            var tdh_id = "tdh" + tr_id;
+            for (var i = 1; i < 8; i++) {
+                $("#{0}{1}".format(td_id, i)).html($("#{0}{1}".format(in_id, i)).val());@*set td value which is hidden from input*@
+                $("#{0}{1}".format(tdh_id, i)).css('display', 'none');
+                $("#{0}{1}".format(in_id, i)).css('display', 'none');
+                $("#{0}{1}".format(td_id, i)).css('display', 'table-cell');
+            }
+            e.preventDefault();
+        });
+
+        $(".btn.cancel").bind("click", function (e) {
+            var tr_id = (JSON.stringify($(this).parent().prop('id'))).slice(4, -2);@*get button tr id into string format*@
+            var td_id = "td" + tr_id;
+            var in_id = "in" + tr_id;
+            var tdh_id = "tdh" + tr_id;
+            for (var i = 1; i < 8; i++) {
+                $("#{0}{1}".format(in_id, i)).val($("#{0}{1}".format(td_id, i)).html());
+                $("#{0}{1}".format(tdh_id, i)).css('display', 'none');
+                $("#{0}{1}".format(in_id, i)).css('display', 'none');
+                $("#{0}{1}".format(td_id, i)).css('display', 'table-cell');
+            }
+            e.preventDefault();
+        });
+
+        $(".btn.delete").bind("click", function (e) {
+            var tr_id = (JSON.stringify($(this).parent().prop('id'))).slice(3, -2);@*get button tr id into string format*@
+            $('#tr{0}'.format(tr_id)).remove();
+            e.preventDefault();
+        });
+
+        $("#subx").submit();
+        
+    });
+</script>
+<div class="container" style="outline: 1px solid black;">
+    <h2 style="text-align:center;">Preview</h2>
+    <div class="container" style="outline: 1px solid black;">
+        @using (Html.BeginForm("Update", "Logins", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.ValidationSummary()
+            @Html.AntiForgeryToken()
+            if (Model != null)
+            {
+                <table class="table table-hover" style="table-layout:fixed;">
+                    <thead>
+                        <tr>
+                            @foreach(DataColumn col in Model.Columns)
+                            {
+                                <th>@col.ColumnName</th>
+                            }
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{int i = 1;}
+                        @foreach (DataRow row in Model.Rows)
+                        {
+                            <tr id="@string.Format("tr{0}", i)">
+                                @{int j = 1;}
+                                @foreach (DataColumn col in Model.Columns)
+                                {
+                                    <td id="@string.Format("td{0}{1}", i, j)">@row[col.ColumnName]</td>
+                                    <td id="@string.Format("tdh{0}{1}", i, j)" style="display:none;"><input type="text" name="@string.Format("nm{0}{1}", i, j)" id="@string.Format("in{0}{1}", i, j)" style="display:none;" value="@row[col.ColumnName]"/></td>
+                                    j++;
+                                }
+                                <td id="@string.Format("td{0}{1}", i, j)" ><input type="button" class="btn edit"  value="Edit"/></td>
+                                <td id="@string.Format("tdh{0}{1}", i, j)" style="display:none;"><input type="button" class="btn done" value="Done" /></td>
+                                @{j++;}
+                                <td id="@string.Format("td{0}{1}",i,j)"><input type="button" class="btn delete"  value="Delete"/></td>
+                                <td id="@string.Format("tdh{0}{1}",i,j)" style="display:none;"><input type="button" class="btn cancel" value="Cancel" /></td>
+                            </tr>
+                           i++;
+                        }
+                    </tbody>
+                </table>
+            }
+            <label class="btn btn-info btn-file" style="padding-left:20px;padding-right:20px;margin-left:44%;">
+                   upload data <input type="submit" id="subx" style="display: none;" />
+            </label>
+        }
+    </div>
+</div>
+
+@*$('#fsubmit').submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: $(form).attr('action'),
+            data: $(form).serialize(),
+            beforeSend: lockingMethod(), // do your magic here
+            success: function (result) {
+                var result = eval('(' + result + ')');
+                if (result.success) {
+                    $('#et').datagrid('reload');    // reload the user data
+                } else {
+                    $.messager.show({
+                        title: 'Error',
+                        msg: result.msg
+                    });
+                }
+            }
+
+        });
+        return false;
+    });*@
