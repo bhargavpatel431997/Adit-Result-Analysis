@@ -16,6 +16,7 @@
 ### Steps to work on it.
 - first ```clone``` repository.
 - open ```ARAFFinal.sln``` into visual studio.
+- now you can see implementation and what features were used for study.
 
 ## Doubt?
 - contact me: bhargavpatel431997@gmail.com
