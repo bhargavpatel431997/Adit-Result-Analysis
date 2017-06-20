@@ -11,7 +11,7 @@
 ### Documentation and Software development life cycle
 - ```ARAFFinal_SDLC_WORK.docx``` file contains log information about individual software development life cycle task performed in particular week duration.
 - ```ARAFFinal.chm``` file contains documentation of methods and datatypes.
-- ```project_screen_shots``` contains nevigation of pages.
+- ```project_screen_shots``` folder contains important page images to clear overview how it would look like.
 
 ## How to Use project?
 - First of all ```clone``` repository.
