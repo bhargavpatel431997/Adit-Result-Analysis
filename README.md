@@ -13,12 +13,13 @@
 - ```ARAFFinal.chm``` file contains documentation of methods and datatypes.
 - ```project_screen_shots``` folder contains important page images to clear overview how it would look like.
 
-### steps to work on it.
+### Steps to work on it.
 - first ```clone``` repository.
 - open ```ARAFFinal.sln``` into visual studio.
 
 ## Doubt?
 - contact me: bhargavpatel431997@gmail.com
+- mobile  no: +91 8469997286
 
 ## References
 - https://docs.microsoft.com/
