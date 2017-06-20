@@ -13,10 +13,9 @@
 - ```ARAFFinal.chm``` file contains documentation of methods and datatypes.
 - ```project_screen_shots``` folder contains important page images to clear overview how it would look like.
 
-## How to Use project?
-- First of all ```clone``` repository.
-- open ```ARAFFinal.sln``` file into visual studio.
-- now edit files if you wish or just press ```F5``` to run.
+### steps to work on it.
+- first ```clone``` repository.
+- open ```ARAFFinal.sln``` into visual studio.
 
 ## Doubt?
 - contact me: bhargavpatel431997@gmail.com
