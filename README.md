@@ -16,7 +16,7 @@
 ## How to Use project?
 - First of all ```clone``` repository.
 - open ```ARAFFinal.sln``` file into visual studio.
-- now edit methods if you wish or just press ```F5``` to run.
+- now edit files if you wish or just press ```F5``` to run.
 
 ## Doubt?
 - contact me: bhargavpatel431997@gmail.com
