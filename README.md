@@ -1,6 +1,6 @@
 # Adit-Result-Analysis
 ## Introudction
-- This project is MVC 5 .NET framework project purpose is to automatically management of student result data and to perform analysis per semester for perticular department.
+- This project is MVC 5 .NET framework project purpose is to automatic management of student result data and to perform analysis per semester for perticular department.
 
 ## File and Folder Description
 ### Main files and folders of project
