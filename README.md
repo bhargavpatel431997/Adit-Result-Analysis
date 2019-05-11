@@ -19,8 +19,7 @@
 - now you can see implementation and what features were used for curiosity.
 
 ## Doubt?
-- contact me: bhargavpatel431997@gmail.com
-- mobile  no: +91 8469997286
+- contact me: bhargavpatel4397@gmail.com
 
 ## References
 - https://docs.microsoft.com/
