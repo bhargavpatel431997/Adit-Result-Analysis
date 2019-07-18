@@ -18,9 +18,6 @@
 - open ```ARAFFinal.sln``` into visual studio.
 - now you can see implementation and what features were used for curiosity.
 
-## Doubt?
-- contact me: bhargavpatel4397@gmail.com
-
 ## References
 - https://docs.microsoft.com/
 - https://www.codeproject.com/
